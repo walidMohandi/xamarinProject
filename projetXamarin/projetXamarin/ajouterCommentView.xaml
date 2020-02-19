@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="projetXamarin.ajouterCommentView">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#32547B">
+            <Label Text="Votre Commentaire"
+                  TextColor="White" FontSize="Large" Margin="20,20,20,0"/>
+
+            <Entry Text="{Binding Commentaire}" TextColor="Black" FontSize="Large" Margin="20,5,20,0" BackgroundColor="White"/>
+
+            <Button Text="Ajouter le commentaire" Command="{Binding btnAjouterCommentaire}"  Margin="20,10,20,0" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

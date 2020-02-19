@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="projetXamarin.commentView">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#32547B" >
+            <Label Text="Liste des commentaires :" FontSize="Large" HorizontalOptions="Center" TextColor="White"/>
+            <Button Text="Ajouter un commentaire" Command="{Binding btnAjouterCommentaire}" Margin="20,5,20,5"/>
+            <ListView ItemsSource="{Binding ListComments}" BackgroundColor="#941A69" Margin="20,0,20,0" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell  Text="{Binding Text}" TextColor="White" 
+                                   Detail="{Binding Author}" DetailColor="White"
+                                    ImageSource="{Binding Id , StringFormat= 'https://td-api.julienmialon.com/images/{0}'}"
+                                   />
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

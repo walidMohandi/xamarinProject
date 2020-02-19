@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="projetXamarin.MainPage">
+
+    <StackLayout BackgroundColor="#32547B">
+        <Label Text="Username" TextColor="White" FontSize="Large" Margin="20,20,20,0"/>
+        <Entry Text="{Binding Username}" IsPassword="False" Margin="20,5,20,0" BackgroundColor="White" TextColor="Black"/>
+        <Label Text="Password" TextColor="White" FontSize="Large" Margin="20,5,20,0"/>
+        <Entry Text="{Binding Password}" IsPassword="True" Margin="20,5,20,0" BackgroundColor="White" TextColor="Black"/>
+        <Button Text="Submit" Command="{Binding btnSubmit}"  Margin="20,5,20,0"/>
+        <Button Text="S'inscrire !" Command="{Binding btnCreer}" Margin="20,5,20,0"/>
+    </StackLayout>
+
+</ContentPage>

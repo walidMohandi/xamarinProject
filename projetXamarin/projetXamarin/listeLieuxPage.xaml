@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="projetXamarin.listeLieuxPage">
+   
+
+    <ContentPage.Content>
+
+        <StackLayout BackgroundColor="#32547B">
+
+
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Maps" Command="{Binding GoToMaps}" />
+                <Button Text="Commentaires" Command="{Binding GoToComments}"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Ajouter un lieu" Command="{Binding GoToAjouterLieu}"/>
+                <Button Text="Mon Profile " Command="{Binding GoToProfils}"/>
+            </StackLayout>
+            
+           
+            <Label Text="Liste des lieux :" FontSize="Large" HorizontalOptions="Center" TextColor="White"/>
+            <ListView ItemsSource="{Binding ListLieux}"  SelectedItem="{Binding LieuSelected} "  BackgroundColor="#941A69" Margin="20,0,20,0">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell  Text="{Binding Title}" TextColor="White"
+                                    Detail="{Binding Description}" DetailColor="White"
+                                    ImageSource="{Binding Id, StringFormat= 'https://td-api.julienmialon.com/images/{0}'}"
+                                    />
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+      
+    </ContentPage.Content>
+</ContentPage>
