@@ -47,7 +47,7 @@ namespace projetXamarin.ViewModel
         }
 
        
-
+        //
         public async void getComments(int id)
         {
             GetPlaceItem = await DependencyService.Resolve<IAuthService>().getComments(id);
